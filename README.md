@@ -9,10 +9,11 @@ A user-persona template to be used for quick-access from larger teams or compani
 
 **QUOTE** Section: Quote
 
-**PERSONALTY** Section: 
+**PERSONALTY** Section: What the Persona's personality is
 
+**TECHNOLOGY** Section: What the Persona knows about Tools and Technologies
 
-**USER STORIES** Section:
+**USER STORIES** Section: The result of the details above gathered in User Stories
  
 
 ## Installation
