@@ -1,0 +1,461 @@
+/*
+################################################################################
+## Header
+ */
+body {
+    font-weight: 200;
+    background-color: #f3f6fc;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #666;
+    font-weight: 300;
+    letter-spacing: 1.1px;
+    text-transform: uppercase;
+}
+.section {
+    margin: 30px 0 30px 0;
+    padding: 28px 0 28px 0;
+}
+.section-last {
+    margin: 0;
+}
+.lead {
+    color: #7c8081;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 1.6;
+    letter-spacing: 0.8px;
+}
+.special-hr {
+    margin-top: 0;
+    border-color: #ccc;
+}
+.footer {
+    bottom: 0;
+    color: #7c8081;
+    font-size: 12px;
+    font-weight: 300;
+    height: 45px;
+    padding: 14px 0;
+    background: black;
+}
+.title {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 10px 0 10px 15px;
+}
+.navigation {
+    @include box-shadow(0px 0px 3px 0px rgba(0,0,0,0.4));
+    overflow: hidden;
+    height: 50px;
+    background: url("../img/bg_top1.png") top center;
+    background-size: 100% auto;
+}
+.nav-item-img {
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.nav-item-name {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 8px;
+}
+.nav {
+    margin-right: 15px;
+    ul {
+        list-style: none;
+    }
+    li {
+        float: left;
+        margin: 10px 20px;
+    }
+    a {
+        display: table;
+        color: white;
+    }
+}
+
+.headerimage {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 600px;
+    background: url("../img/bg_top1.png") no-repeat;
+    background-position: top center;
+    background-size: 100% auto;
+}
+.persona-name {
+    position: absolute;
+    top: 200px;
+    left: 50%;
+    color: white;
+    font-size: 35px;
+    font-weight: 200;
+    line-height: 1;
+    text-align: right;
+    text-transform: uppercase;
+    width: 200px;
+    margin-left: -320px;
+}
+.persona-role {
+    position: absolute;
+    right: 0;
+    bottom: -16px;
+    font-size: 14px;
+    text-transform: none;
+    width: 200px;
+}
+.persona-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+    &.carl {
+        background: url("../img/personas/carl.png") no-repeat center bottom;
+    }
+}
+.technology-item {
+    padding: 12px 0;
+}
+.technology-item-name {
+    position: relative;
+}
+.technology-item-percentage {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    font-size: 40px;
+    font-weight: 100;
+    opacity: 0.6;
+}
+
+.margin-top-50 {
+    margin-top: -50px;
+}
+
+.coordinates {
+    padding: 15px;
+    span {
+        font-weight: 400;
+    }
+}
+
+.parallax-bg-first {
+    min-width: 100%;
+    min-height: 200px;
+    //background: url('../img/parallax_first.jpg');
+    background: transparent;
+}
+
+.parallax-bg-second {
+    min-width: 100%;
+    //background: url('../img/parallax_first.jpg');
+    min-height: 200px;
+}
+
+blockquote {
+    color: white;
+    font-family: $font-family-serif;
+    font-size: 55px;
+    text-align: center;
+    border: 0;
+    &:before {
+        content: "\201C";
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: -10px;
+        color: rgba(255,255,255,0.3);
+        font-size: 170px;
+        line-height: 1em;
+    }
+}
+.progress {
+    height: 10px;
+    border-radius: 0;
+    background-color: rgba(255,255,255,0.5);
+}
+.progress-bar {
+    background-color: rgba(255,255,255,0.8);
+}
+
+.personality-img {
+    height: 240px;
+}
+
+.charts {
+    position: relative;
+    padding-bottom: 170px;
+    hr {
+        border-color: #fff;
+    }
+}
+
+.goal-list,
+.frustration-list {
+    padding-left: 0;
+    list-style-type: none;
+    li {
+        margin: 5px 0;
+        padding: 0 0 20px 20px;
+        background-color: white;
+        // border-radius: 10px;
+        &:before {
+            position: relative;
+            font-family: "Glyphicons Halflings";
+            font-size: 30px;
+            margin-right: 10px;
+            margin-bottom: -10px;
+        }
+    }
+}
+
+.goal-list li:before {
+    content: "\e260";
+    top: 10px;
+    color: #b6f4bc;
+}
+.frustration-list li:before {
+    content: "\e259";
+    top: 8px;
+    color: #f4c0b6;
+}
+
+
+.arrow {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: #f3f6fc;
+}
+.arrow:before,
+.arrow:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    box-sizing: border-box;
+    width: 50%;
+}
+.arrow:before {
+    right: 50%;
+    border-right: 100px solid transparent;
+    border-bottom: 100px solid #f3f6fc;
+}
+.arrow:after {
+    left: 50%;
+    border-bottom: 100px solid #f3f6fc;
+    border-left: 100px solid transparent;
+}
+
+
+ol {
+    margin: 0;
+    margin-left: 3em;
+    padding: 0;
+    list-style-type: none;
+    counter-reset: li-counter;
+}
+ol li {
+    position: relative;
+    min-height: 3em;
+    margin-bottom: 20px;
+    padding-left: 0.5em;
+    border-left: 1px solid #ccc;
+}
+ol li:before {
+    content: counter(li-counter);
+    position: absolute;
+    top: 0;
+    left: -1em;
+    color: #666;
+    font-size: 3em;
+    font-weight: bold;
+    line-height: 1;
+    text-align: right;
+    width: 0.8em;
+    counter-increment: li-counter;
+}
+
+.userstory-highlight {
+    font-weight: 400;
+}
+
+
+// HELPERS
+.gray-bg {
+    background: #efefef;
+}
+.lightgray-bg {
+    background: #f3f6fc;
+}
+.white-bg {
+    background: #fff;
+}
+.spacer-zero {
+    overflow: hidden;
+    margin: 0;
+}
+.spacer-xs {
+    overflow: hidden;
+    margin: 5px 0;
+}
+.spacer {
+    overflow: hidden;
+    margin: 10px 0;
+}
+.spacer-lg {
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.spacer-xl {
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.spacer-xxl {
+    overflow: hidden;
+    margin: 80px 0;
+}
+.text-white {
+    color: white;
+    h1,
+    h2,
+    h3 {
+        color: white;
+    }
+}
+.img-caption {
+    font-size: 10px;
+}
+
+// Pagetitle Styling
+.page-title-name {
+    color: #222;
+    font-weight: 400;
+}
+
+
+// Pie Charts
+#chart-one,
+#chart-two,
+#chart-three,
+#chart-four {
+    position: relative;
+    width: 220px !important;
+    height: 220px !important;
+}
+.chart-title {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    margin-top: -25px;
+    margin-left: 10px;
+}
+.first-val:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 82px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.second-val:before {
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 82px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+// Speical Link Effects
+//
+//
+.hover-effect a:hover,
+.hover-effect a:focus {
+    outline: none;
+}
+/* Effect 2: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+.hover-effect a {
+    display: inline-block;
+    position: relative;
+    line-height: 1.3;
+    outline: none;
+
+    -webkit-perspective: 1000px;
+       -moz-perspective: 1000px;
+            perspective: 1000px;
+}
+
+.hover-effect a span {
+    display: inline-block;
+    position: relative;
+    font-weight: 200;
+    padding: 0 2px;
+    background: transparent;
+    -webkit-transition: -webkit-transform 0.3s;
+       -moz-transition:    -moz-transform 0.3s;
+            transition:         transform 0.3s;
+    -webkit-transform-origin: 50% 0;
+       -moz-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.csstransforms3d .hover-effect a span:before {
+    content: attr(data-hover);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0 2px;
+    background: #d98c7d;
+    -webkit-transition: background 0.3s;
+       -moz-transition: background 0.3s;
+            transition: background 0.3s;
+    -webkit-transform: rotateX(-90deg);
+       -moz-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+    -webkit-transform-origin: 50% 0;
+       -moz-transform-origin: 50% 0;
+            transform-origin: 50% 0;
+}
+
+.hover-effect a:hover span,
+.hover-effect a:focus span {
+    -webkit-transform: rotateX(90deg) translateY(-22px);
+       -moz-transform: rotateX(90deg) translateY(-22px);
+            transform: rotateX(90deg) translateY(-22px);
+}
+
+.csstransforms3d .hover-effect a:hover span:before,
+.csstransforms3d .hover-effect a:focus span:before {
+    color: black;
+    padding: 0 2px;
+    background: #eaedf2;
+}
