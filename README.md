@@ -20,9 +20,9 @@ A user-persona template to be used for quick-access from larger teams or compani
 
 Just clone the repository and start adapting `index.html`
 
-## Usage
+## SASS Compiling
 
-Make user you run `compass watch` in the folder.
+Run `compass watch` in the main folder to compile css.
 
 ## Contributing
 
@@ -34,7 +34,7 @@ Make user you run `compass watch` in the folder.
 
 ## History
 
-The User Persona Template has been created to support all UX based decisions and developments of [Aldryn](http://www.aldryn.com) a product of [DIVIO AG](http://www.divio.ch), Switzerland. 
+The User Persona Template has been created to support all UX based decisions and developments of your next project.
 
 ## Credits
 
